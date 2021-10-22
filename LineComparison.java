@@ -16,10 +16,17 @@ public class LineComparison {
 		value.setLength2();
 		System.out.println("Length of line 1 ::" + value.getLength1());
 		System.out.println("Length of line 2 ::"+ value.getLength2());
-		String str1 = Double.toString(value.getLength1());
-		String str2 = Double.toString(value.getLength2());
-		System.out.println("Is length of line 1 = length of line 2  ");
-		System.out.println(str1.equals(str2));
+		double a = value.getLength1() ;
+		double b = value.getLength2() ;
+		if (Double.compare(a, b) == 0) {
+			System.out.println("Length1 = Length2");
+		}
+		else if (Double.compare(a, b) < 0) {
+			System.out.println("Length1 is less than Length2");
+		}
+		else {
+			System.out.println("Length1 is greater than Length2");
+		}
 	}
 	public void enterValues1() {
 		Scanner sc = new Scanner(System.in);
